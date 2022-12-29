@@ -8,11 +8,17 @@
   <div class="full-person-extra-data">
     <h3>Parties</h3>
     <hr>
-    <p *ngFor="let party of parties">{{ party }}</p>
+    <ul>
+      <li *ngFor="let party of parties">{{ party }}</li>
+    </ul>
   </div>
   <div class="full-person-extra-data">
     <h3>Websites</h3>
     <hr>
-    <p *ngFor="let website of websites">{{ website }}</p>
+    <ul>
+      <li *ngFor="let website of websites">
+        <a [href]="website" target="_blank">{{ website }}</a>
+      </li>
+    </ul>
   </div>
 </div>
