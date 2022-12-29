@@ -9,7 +9,6 @@ export class MembersService {
   members: Member[] = [];
 
   async getMembers(): Promise<Member[]> {
-    alert('getting members');
     let res = await fetch(membersApiUrl);
     let members: Member[] = await res.json();
     return members;
@@ -17,6 +16,10 @@ export class MembersService {
 
   constructor() {
     this.getMembers().then((members) => (this.members = members));
+  }
+
+  getSingleMember(personId: string) {
+    return this.members.find((m) => `${m.PersonID}` == personId);
   }
 
   getProfilePicture(member: Member) {

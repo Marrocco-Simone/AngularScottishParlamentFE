@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Member } from 'src/types';
-import { membersApiUrl } from 'src/urls/urls';
 import { MembersService } from '../members.service';
 
 @Component({
@@ -13,20 +12,23 @@ export class FullPersonComponent {
   personId!: string;
   member!: Member;
 
-  async getMember(): Promise<Member> {
-    let res = await fetch(`${membersApiUrl}/${this.personId}`);
-    let member: Member = await res.json();
-    return member;
-  }
-
   membersService!: MembersService;
 
-  constructor(route: ActivatedRoute, membersService: MembersService) {
+  constructor(
+    route: ActivatedRoute,
+    membersService: MembersService,
+    router: Router
+  ) {
     this.membersService = membersService;
 
     route.params.subscribe((params: Params) => {
       this.personId = params['personId'];
-      this.getMember().then((member) => (this.member = member));
+      let member = this.membersService.getSingleMember(this.personId);
+      if (!member) {
+        router.navigate(['/']);
+        return;
+      }
+      this.member = member;
     });
   }
 }
