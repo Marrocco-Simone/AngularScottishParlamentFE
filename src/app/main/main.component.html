@@ -1,4 +1,4 @@
 <p>main component</p>
-<div *ngFor="let m of members">
-  <app-minimized-person [member]="m"></app-minimized-person>
+<div class="minimized-people">
+  <app-minimized-person *ngFor="let m of members" [member]="m"></app-minimized-person>
 </div>
