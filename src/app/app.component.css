@@ -1,0 +1,14 @@
+header {
+  height: 10vh;
+  width: 100vw;
+  border-bottom: 0.2em solid black;
+  background-color: red;
+  position: fixed;
+  top: 0;
+}
+
+.main-grid {
+  margin-left: 8vw;
+  margin-right: 8vw;
+  margin-top: 10vh;
+}
