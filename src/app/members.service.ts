@@ -8,14 +8,13 @@ import { membersApiUrl } from 'src/urls/urls';
 export class MembersService {
   members: Member[] = [];
 
-  async getMembers(): Promise<Member[]> {
+  async getMembers() {
     let res = await fetch(membersApiUrl);
-    let members: Member[] = await res.json();
-    return members;
+    this.members = await res.json();
   }
 
   constructor() {
-    this.getMembers().then((members) => (this.members = members));
+    this.getMembers();
   }
 
   getSingleMember(personId: string) {
