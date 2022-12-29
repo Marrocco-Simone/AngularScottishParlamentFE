@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Member } from 'src/types';
+import { MembersService } from '../members.service';
 
 @Component({
   selector: 'app-minimized-person',
@@ -10,15 +11,9 @@ export class MinimizedPersonComponent {
   @Input()
   member!: Member;
 
-  getProfilePicture() {
-    let url = this.member.PhotoURL
-      ? this.member.PhotoURL
-      : 'assets/blank-profile-picture.jpg';
-    return url;
-  }
-
-  onclick(event: MouseEvent) {
-    event.stopPropagation();
-    console.log(`id: ${this.member.PersonID}`);
+  membersService!: MembersService;
+  
+  constructor(membersService: MembersService) {
+    this.membersService = membersService;
   }
 }

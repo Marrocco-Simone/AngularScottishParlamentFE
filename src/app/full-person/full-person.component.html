@@ -1,10 +1,10 @@
 <div class="full-person">
   <div class="full-person-box">
-    <img [src]="getProfilePicture()" />
+    <img src={{membersService.getProfilePicture(member)}} />
     <div class="full-person-description">
       <p>Member {{ member.PersonID }}:</p>
       <p>{{ member.ParliamentaryName }}</p>
-      <p>{{ getBirthDate() }}</p>
+      <p>{{ membersService.getBirthDate(member) }}</p>
     </div>
   </div>
 </div>

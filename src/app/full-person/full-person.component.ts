@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Member } from 'src/types';
 import { membersApiUrl } from 'src/urls/urls';
+import { MembersService } from '../members.service';
 
 @Component({
   selector: 'app-full-person',
@@ -18,27 +19,14 @@ export class FullPersonComponent {
     return member;
   }
 
-  constructor(route: ActivatedRoute) {
+  membersService!: MembersService;
+
+  constructor(route: ActivatedRoute, membersService: MembersService) {
+    this.membersService = membersService;
+
     route.params.subscribe((params: Params) => {
       this.personId = params['personId'];
       this.getMember().then((member) => (this.member = member));
     });
-  }
-
-  getProfilePicture() {
-    let url = this.member.PhotoURL
-      ? this.member.PhotoURL
-      : 'assets/blank-profile-picture.jpg';
-    return url;
-  }
-
-  getBirthDate() {
-    if (!this.member.BirthDate) return '';
-    try {
-      let date = new Date(this.member.BirthDate);
-      return `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
-    } catch (e) {
-      return '';
-    }
   }
 }

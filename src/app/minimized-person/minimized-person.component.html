@@ -1,4 +1,4 @@
 <a [routerLink]="['/personDetail', member.PersonID]" class="minimized-person">
-  <img [src]=getProfilePicture()/>
+  <img src={{membersService.getProfilePicture(member)}}/>
   <p>{{member.ParliamentaryName}}</p>
 </a>
