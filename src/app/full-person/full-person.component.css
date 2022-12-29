@@ -1,0 +1,24 @@
+.full-person {
+  padding-left: var(--main-lateral-padding);
+  padding-right: var(--main-lateral-padding);
+  padding-top: 10vh;
+  margin-top: var(--header-size);
+  height: calc(100vh - var(--header-size));
+
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  height: 70vh;
+  padding: 1vh;
+  border-radius: var(--border-radius);
+  aspect-ratio: 3 / 2 ;
+  pointer-events: none;
+} 
+
+.full-person-description {
+  display: flex;
+  flex-direction: column;
+  font-size: xx-large;
+}
