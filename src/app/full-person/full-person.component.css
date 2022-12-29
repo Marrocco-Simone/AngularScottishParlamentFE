@@ -4,12 +4,10 @@
   padding-right: var(--main-lateral-padding); 
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 img {
-  grid-column: span 3;
-
   height: var(--full-person-img-height);
   aspect-ratio: 3 / 2 ;
   border-radius: var(--border-radius);
@@ -19,14 +17,13 @@ img {
 .full-person-description {
   display: flex;
   flex-direction: column;
-  font-size: xxx-large;
+  font-size: xx-large;
   justify-content: center;
   align-items: flex-start;
-  margin: auto;
+  margin-right: auto;
 }
 
 .full-person-extra-data {
-  grid-column: span 2;
   font-size: x-large;
 }
 
