@@ -6,9 +6,9 @@ import { membersApiUrl } from 'src/urls/urls';
   providedIn: 'root',
 })
 export class MembersService {
-  members: Member[] = [];
+  private members: Member[] = [];
 
-  async getMembers() {
+  private async getMembers() {
     let res = await fetch(membersApiUrl);
     this.members = await res.json();
   }
