@@ -1,0 +1,30 @@
+header {
+  height: var(--header-size);
+  width: 100vw;
+  border-bottom: 0.2em solid black;
+  position: fixed;
+  top: 0;
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  height: calc(var(--header-size) * 0.7);
+  padding: calc(var(--header-size) * 0.15);
+}
+
+a {
+  height: calc(var(--header-size) * 0.7);
+  padding: calc(var(--header-size) * 0.15);
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+}
+
+svg {
+  height: 70%;
+}
