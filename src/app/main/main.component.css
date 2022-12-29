@@ -3,10 +3,11 @@
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding-left: 8vw;
-  padding-right: 8vw;
-  margin-top: 10vh;
-  height: 90vh;
+  padding-left: var(--main-lateral-padding);
+  padding-right: var(--main-lateral-padding);
+  padding-top: var(--main-top-padding);
+  margin-top: var(--header-size);
+  height: calc(100vh - var(--header-size));
 
   overflow-y: scroll;
   scroll-snap-type: y mandatory;

@@ -1,34 +1,34 @@
 .minimized-person {
   display: flex;
   flex-direction: column;
-  width: 15vw;
-  margin: 0.5vw;
   text-align: center;
-  border-radius: 5%;
-  border: 0.25vw solid gray;
-  box-shadow: 0.5vw 0.5vw lightgray;
+  justify-content: start;
+
+  width: var(--minimized-person-width);
+  height: var(--minimized-person-height);
+  margin: var(--minimized-person-margin);
+  border-radius: var(--border-radius);
+  border: var(--minimized-person-border) solid gray;
+  box-shadow: var(--minimized-person-margin) var(--minimized-person-margin) lightgray;
 
   scroll-snap-align: center;
-
   transition: all .1s ease-in-out;
 }
 
 .minimized-person:hover {
-  transform: scale(1.1);
+  transform: scale(var(--minimized-person-scale-on-hover));
   background-color: lightgray;
 }
 
 img {
-  border-radius: 5%;
-  margin: 1%;
-  width: 98%;
+  height: 17vh;
+  padding: 1vh;
+  border-radius: var(--border-radius);
   aspect-ratio: 3 / 2 ;
   pointer-events: none;
 } 
 
 p {
   font-size: larger;
-  height: 3vh;
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
+  padding: 0.5vh;
 }

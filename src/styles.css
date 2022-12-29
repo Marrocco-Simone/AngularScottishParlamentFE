@@ -3,3 +3,20 @@ body {
   margin: 0 0;
   padding: 0 0;
 }
+
+:root {
+  --header-size: 10vh;
+  --border-radius: 5%;
+
+  --minimized-person-width: 15vw;
+  --minimized-person-margin: 0.5vw;
+  --minimized-person-border: 0.25vw;
+
+  --people-per-row: 5;
+  --main-lateral-padding: calc((100vw - (var(--minimized-person-width) + var(--minimized-person-margin) * 2 + var(--minimized-person-border) * 2) * var(--people-per-row))/2);
+  --main-top-padding: 0.5vh;
+
+  --minimized-person-scale-on-hover: 1.1;
+  --people-per-column: 3;
+  --minimized-person-height: calc((100vh - var(--header-size) - var(--main-top-padding)) / var(--minimized-person-scale-on-hover) / var(--people-per-column));
+}

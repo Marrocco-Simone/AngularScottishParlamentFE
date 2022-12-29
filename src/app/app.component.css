@@ -1,5 +1,5 @@
 header {
-  height: 10vh;
+  height: var(--header-size);
   width: 100vw;
   border-bottom: 0.2em solid black;
   background-color: red;
