@@ -2,9 +2,15 @@
 body {
   margin: 0 0;
   padding: 0 0;
+  background-color: var(--background-color);
 }
 
 :root {
+  --header-color: #EEF1FF;
+  --background-color: #D2DAFF;
+  --person-color: #AAC4FF;
+  --person-color-hover: #B1B2FF;
+
   --header-size: 10vh;
   --border-radius: 5%;
 

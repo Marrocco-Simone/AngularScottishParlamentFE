@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-color: var(--person-color);
 
   width: var(--minimized-person-width);
   height: var(--minimized-person-height);
   margin: var(--minimized-person-margin);
   border-radius: var(--border-radius);
   border: var(--minimized-person-border) solid gray;
-  box-shadow: var(--minimized-person-margin) var(--minimized-person-margin) lightgray;
+  box-shadow: 
+    var(--minimized-person-margin) 
+    var(--minimized-person-margin) 
+    var(--person-color-hover);
 
   scroll-snap-align: center;
   transition: all .1s ease-in-out;
@@ -16,7 +20,7 @@
 
 .minimized-person:hover {
   transform: scale(var(--minimized-person-scale-on-hover));
-  background-color: lightgray;
+  background-color: var(--person-color-hover);
 }
 
 img {
