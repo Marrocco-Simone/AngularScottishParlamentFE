@@ -17,10 +17,6 @@ export class MinimizedPersonComponent {
     return url;
   }
 
-  memberToString() {
-    return `${this.member.ParliamentaryName}`;
-  }
-
   onclick(event: MouseEvent) {
     event.stopPropagation();
     console.log(`id: ${this.member.PersonID}`);
