@@ -27,6 +27,8 @@ img {
 } 
 
 p {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  font-size: larger;
+  height: 3vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
 }
