@@ -5,7 +5,6 @@
 
   padding-left: var(--main-lateral-padding);
   padding-right: var(--main-lateral-padding);
-  padding-top: var(--main-top-padding);
   margin-top: var(--header-size);
   height: calc(100vh - var(--header-size));
 

@@ -22,7 +22,6 @@ body {
 
   --people-per-row: 5;
   --main-lateral-padding: calc((100vw - (var(--minimized-person-width) + var(--minimized-person-margin) * 2 + var(--minimized-person-border) * 2) * var(--people-per-row))/2);
-  --main-top-padding: 0.5vh;
 
   --minimized-person-scale-on-hover: 1.1;
   --people-per-column: 3;
