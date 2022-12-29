@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Member } from 'src/types';
 import { MembersService } from '../members.service';
 import { PartiesService } from '../parties.service';
+import { WebsitesService } from '../websites.service';
 
 @Component({
   selector: 'app-full-person',
@@ -11,15 +12,17 @@ import { PartiesService } from '../parties.service';
 })
 export class FullPersonComponent {
   member!: Member;
-  parties!: string[];
   birth_date!: string;
   profile_picture_url!: string;
+  parties!: string[];
+  websites!: string[];
 
   constructor(
     route: ActivatedRoute,
     router: Router,
     membersService: MembersService,
-    partiesService: PartiesService
+    partiesService: PartiesService,
+    websiteService: WebsitesService
   ) {
     route.params.subscribe((params: Params) => {
       let personId = params['personId'];
@@ -33,6 +36,7 @@ export class FullPersonComponent {
       this.profile_picture_url = membersService.getProfilePicture(member);
 
       this.parties = partiesService.getPersonParties(personId);
+      this.websites = websiteService.getWebsiteUrls(personId);
     });
   }
 }
