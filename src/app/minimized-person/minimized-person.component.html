@@ -1,8 +1,4 @@
-<div class="minimized-person" (click)="onclick($event)">
+<a [routerLink]="['/personDetail', member.PersonID]" class="minimized-person">
   <img [src]=getProfilePicture()/>
   <p>{{memberToString()}}</p>
-</div>
-<!-- <a [href]="member.PhotoURL" class="minimized-person">
-  <img [src]=getProfilePicture()/>
-  <p>{{memberToString()}}</p>
-</a> -->
+</a>

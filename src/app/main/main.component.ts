@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Member } from 'src/types';
+import { membersApiUrl } from 'src/urls/urls';
 
 @Component({
   selector: 'app-main',
@@ -7,6 +8,15 @@ import { Member } from 'src/types';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-  @Input()
   members: Member[] = [];
+
+  async getMembers(): Promise<Member[]> {
+    let res = await fetch(membersApiUrl);
+    let members: Member[] = await res.json();
+    return members;
+  }
+
+  constructor() {
+    this.getMembers().then((members) => (this.members = members));
+  }
 }

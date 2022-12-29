@@ -31,3 +31,8 @@ p {
   font-size: larger;
   padding: 0.5vh;
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
