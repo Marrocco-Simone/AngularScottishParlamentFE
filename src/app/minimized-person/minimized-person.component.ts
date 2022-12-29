@@ -13,12 +13,16 @@ export class MinimizedPersonComponent {
   getProfilePicture() {
     let url = this.member.PhotoURL
       ? this.member.PhotoURL
-      : 'assets/blank-profile-picture.png';
+      : 'assets/blank-profile-picture.jpg';
     console.log(url);
     return url;
   }
 
   memberToString() {
-    return `${this.member.ParliamentaryName} (${this.member.PersonID})`;
+    return `${this.member.ParliamentaryName}`;
+  }
+
+  onclick() {
+    console.log(`id: ${this.member.PersonID}`);
   }
 }

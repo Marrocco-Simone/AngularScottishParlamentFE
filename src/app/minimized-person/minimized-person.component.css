@@ -1,0 +1,26 @@
+.minimized-person {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  text-align: center;
+  border-radius: 5%;
+  border: 0.25vw solid gray;
+  box-shadow: 0.5vw 0.5vw lightgray;
+}
+
+.minimized-person:hover {
+  background-color: red;
+}
+
+img {
+  border-radius: 5%;
+  margin: 1%;
+  width: 98%;
+  aspect-ratio: 3 / 2 ;
+  pointer-events: none;
+} 
+
+p {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}

@@ -1,3 +1,4 @@
-<p>app-minimized-person</p>
-<img [src]=getProfilePicture() width="300px" height="200px"/>
-{{memberToString()}}
+<div class="minimized-person" (click)="onclick">
+  <img [src]=getProfilePicture()/>
+  <p>{{memberToString()}}</p>
+</div>
