@@ -14,7 +14,6 @@ export class MinimizedPersonComponent {
     let url = this.member.PhotoURL
       ? this.member.PhotoURL
       : 'assets/blank-profile-picture.jpg';
-    console.log(url);
     return url;
   }
 
@@ -22,7 +21,8 @@ export class MinimizedPersonComponent {
     return `${this.member.ParliamentaryName}`;
   }
 
-  onclick() {
+  onclick(event: MouseEvent) {
+    event.stopPropagation();
     console.log(`id: ${this.member.PersonID}`);
   }
 }

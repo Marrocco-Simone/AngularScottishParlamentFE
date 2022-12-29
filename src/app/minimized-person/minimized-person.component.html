@@ -1,4 +1,4 @@
-<div class="minimized-person" (click)="onclick">
+<div class="minimized-person" (click)="onclick($event)">
   <img [src]=getProfilePicture()/>
   <p>{{memberToString()}}</p>
 </div>
