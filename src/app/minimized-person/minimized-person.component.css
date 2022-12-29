@@ -8,7 +8,6 @@
   height: var(--minimized-person-height);
   margin: var(--minimized-person-margin);
   border-radius: var(--border-radius);
-  border: var(--minimized-person-border) solid gray;
   box-shadow: 
     var(--minimized-person-margin) 
     var(--minimized-person-margin) 
@@ -21,6 +20,7 @@
 .minimized-person:hover {
   transform: scale(var(--minimized-person-scale-on-hover));
   background-color: var(--person-color-hover);
+  box-shadow: 0 0 transparent;
 }
 
 img {

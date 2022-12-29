@@ -1,7 +1,15 @@
 .full-person {
-  padding-top: var(--header-size);
-  padding-left: var(--main-lateral-padding);
-  padding-right: var(--main-lateral-padding); 
+  margin-top: calc(var(--header-size) + 5vh);
+  margin-left: var(--main-lateral-padding);
+  margin-right: var(--main-lateral-padding); 
+  padding: 1%;
+
+  background-color: var(--person-color);
+  box-shadow: 
+  var(--minimized-person-margin) 
+  var(--minimized-person-margin) 
+  var(--person-color-hover);
+  border-radius: var(--border-radius);
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
