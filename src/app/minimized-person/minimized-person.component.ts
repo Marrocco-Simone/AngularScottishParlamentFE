@@ -1,0 +1,24 @@
+import { Component, Input } from '@angular/core';
+import { Member } from 'src/types';
+
+@Component({
+  selector: 'app-minimized-person',
+  templateUrl: './minimized-person.component.html',
+  styleUrls: ['./minimized-person.component.css']
+})
+export class MinimizedPersonComponent {
+  @Input()
+  member!: Member;
+
+  getProfilePicture() {
+    let url = this.member.PhotoURL
+      ? this.member.PhotoURL
+      : 'assets/blank-profile-picture.png';
+    console.log(url);
+    return url;
+  }
+
+  memberToString() {
+    return `${this.member.ParliamentaryName} (${this.member.PersonID})`;
+  }
+}
