@@ -18,9 +18,7 @@ body {
   --minimized-person-margin: 0.5vw;
   --minimized-person-border: 0.25vw;
 
-  --full-person-width: 76vw;
-  --full-person-height: 70vh;
-  --full-person-padding-right: 2vw;
+  --full-person-img-height: 70vh;
 
   --people-per-row: 5;
   --main-lateral-padding: calc((100vw - (var(--minimized-person-width) + var(--minimized-person-margin) * 2 + var(--minimized-person-border) * 2) * var(--people-per-row))/2);

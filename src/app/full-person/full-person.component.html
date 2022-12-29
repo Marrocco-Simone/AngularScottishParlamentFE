@@ -1,11 +1,18 @@
 <div class="full-person">
-  <div class="full-person-box">
-    <img src={{profile_picture_url}} />
-    <div class="full-person-description">
-      <p>Member {{ member.PersonID }}:</p>
-      <p>{{ member.ParliamentaryName }}</p>
-      <p>{{ birth_date }}</p>
-      <!-- <p *ngFor="let party of parties">{{party}}</p> -->
-    </div>
+  <img src="{{ profile_picture_url }}" />
+  <div class="full-person-description">
+    <p>Member {{ member.PersonID }}:</p>
+    <p>{{ member.ParliamentaryName }}</p>
+    <p>{{ birth_date }}</p>
+  </div>
+  <div class="full-person-extra-data">
+    <h3>Parties</h3>
+    <hr>
+    <p *ngFor="let party of parties">{{ party }}</p>
+  </div>
+  <div class="full-person-extra-data">
+    <h3>Websites</h3>
+    <hr>
+    todo
   </div>
 </div>
