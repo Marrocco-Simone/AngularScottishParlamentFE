@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-items: flex-start;
   background-color: var(--person-color);
 
   width: var(--minimized-person-width);
@@ -34,6 +35,8 @@ img {
 p {
   font-size: larger;
   padding: 0.5vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 a {

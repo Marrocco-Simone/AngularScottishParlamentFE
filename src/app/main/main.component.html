@@ -1,3 +1,16 @@
 <div class="minimized-people">
-  <app-minimized-person *ngFor="let m of membersService.members" [member]="m"></app-minimized-person>
+  <input
+    (keyup)="onKeyPressed($event)"
+    placeholder="Search for a specific person"
+  />
+  <div *ngFor="let m of membersService.members">
+    <app-minimized-person
+      *ngIf="
+        m.ParliamentaryName.toLocaleLowerCase().includes(
+          inputSearchValue.toLocaleLowerCase()
+        )
+      "
+      [member]="m"
+    ></app-minimized-person>
+  </div>
 </div>

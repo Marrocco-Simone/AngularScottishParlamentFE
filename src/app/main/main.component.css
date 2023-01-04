@@ -11,3 +11,10 @@
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
+
+input {
+  margin: 1%;
+  font-size: x-large;
+  width: 100%;
+  height: 5%;
+}

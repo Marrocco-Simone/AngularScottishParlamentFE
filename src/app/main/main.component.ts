@@ -10,8 +10,13 @@ import { MembersService } from '../members.service';
 })
 export class MainComponent {
   membersService!: MembersService;
+  inputSearchValue = "";
   
   constructor(membersService: MembersService) {
     this.membersService = membersService;
+  }
+
+  onKeyPressed(event: any) {
+    this.inputSearchValue = event.target.value;
   }
 }
