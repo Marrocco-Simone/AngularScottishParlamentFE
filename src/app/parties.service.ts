@@ -29,10 +29,10 @@ export class PartiesService {
   }
 
   getPersonParties(personId: string): string[] {
-    let parties: string[] = [];
-    let person_member_parties = this.members_parties.filter((mp) => `${mp.PersonID}` == personId);
+    let parties_names: string[] = [];
+    let member_parties = this.members_parties.filter((mp) => `${mp.PersonID}` == personId);
 
-    for (let pmp of person_member_parties) {
+    for (let pmp of member_parties) {
       let party_name = this.getPartyName(pmp.PartyID);
       if (!party_name) continue;
 
@@ -45,9 +45,9 @@ export class PartiesService {
         party_name += ` until ${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
       }
 
-      parties.push(party_name);
+      parties_names.push(party_name);
     }
 
-    return parties;
+    return parties_names;
   }
 }
