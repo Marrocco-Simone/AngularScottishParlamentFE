@@ -25,7 +25,6 @@
 }
 
 img {
-  height: 17vh;
   padding: 1vh;
   border-radius: var(--border-radius);
   aspect-ratio: 3 / 2 ;

@@ -6,19 +6,20 @@
 
   background-color: var(--person-color);
   box-shadow: 
-  var(--minimized-person-margin) 
-  var(--minimized-person-margin) 
-  var(--person-color-hover);
+    var(--minimized-person-margin) 
+    var(--minimized-person-margin) 
+    var(--person-color-hover);
   border-radius: var(--border-radius);
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
 }
 
 img {
-  height: var(--full-person-img-height);
+  width: 90%;
   aspect-ratio: 3 / 2 ;
   border-radius: var(--border-radius);
+  margin-right: auto;
 } 
 
 .full-person-description {
