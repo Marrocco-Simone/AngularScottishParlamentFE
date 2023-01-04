@@ -16,10 +16,8 @@
 }
 
 img {
-  width: 90%;
   aspect-ratio: 3 / 2 ;
   border-radius: var(--border-radius);
-  margin-right: auto;
 } 
 
 .full-person-description {
@@ -37,7 +35,15 @@ img {
 
 .full-person-extra-data hr, 
 .full-person-extra-data p, 
-.full-person-extra-data h3 {
+.full-person-extra-data h3,
+img {
   width: 90%;
   margin-right: 10%;
+}
+
+a {
+  transition: all .2s ease-in-out;
+}
+a:hover {
+  color: red;
 }

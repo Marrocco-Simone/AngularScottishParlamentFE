@@ -15,6 +15,7 @@
 input {
   margin: 1%;
   font-size: x-large;
-  width: 100%;
+  width: 95%;
+  margin-right: auto;
   height: 5%;
 }

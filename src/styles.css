@@ -6,10 +6,10 @@ body {
 }
 
 :root {
-  --header-color: #EEF1FF;
-  --background-color: #D2DAFF;
-  --person-color: #AAC4FF;
-  --person-color-hover: #B1B2FF;
+  --header-color: #cdf5fd;
+  --background-color: #a8f4fd;
+  --person-color: #64defc;
+  --person-color-hover: #31beff;
 
   --header-size: 10vh;
   --border-radius: 5%;
