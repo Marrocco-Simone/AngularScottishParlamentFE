@@ -5,15 +5,11 @@ import { MembersService } from '../members.service';
 @Component({
   selector: 'app-minimized-person',
   templateUrl: './minimized-person.component.html',
-  styleUrls: ['./minimized-person.component.css']
+  styleUrls: ['./minimized-person.component.css'],
 })
 export class MinimizedPersonComponent {
   @Input()
   member!: Member;
 
-  membersService!: MembersService;
-  
-  constructor(membersService: MembersService) {
-    this.membersService = membersService;
-  }
+  constructor(public membersService: MembersService) {}
 }

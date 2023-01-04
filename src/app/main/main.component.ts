@@ -1,6 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Member } from 'src/types';
-import { membersApiUrl } from 'src/urls/urls';
+import { Component } from '@angular/core';
 import { MembersService } from '../members.service';
 
 @Component({
@@ -9,12 +7,9 @@ import { MembersService } from '../members.service';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent {
-  membersService!: MembersService;
-  inputSearchValue = "";
-  
-  constructor(membersService: MembersService) {
-    this.membersService = membersService;
-  }
+  inputSearchValue = '';
+
+  constructor(public membersService: MembersService) {}
 
   onKeyPressed(event: any) {
     this.inputSearchValue = event.target.value;
