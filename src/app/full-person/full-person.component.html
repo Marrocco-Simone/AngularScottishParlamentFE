@@ -1,22 +1,25 @@
 <div class="full-person">
-  <img src="{{ profile_picture_url }}" />
+  <img src="{{ membersService.getProfilePicture(member) }}" />
+  
   <div class="full-person-description">
     <p>Member {{ member.PersonID }}:</p>
     <p>{{ member.ParliamentaryName }}</p>
-    <p>{{ birth_date }}</p>
+    <p>{{ membersService.getBirthDate(member) }}</p>
   </div>
+ 
   <div class="full-person-extra-data">
     <h3>Parties</h3>
     <hr>
     <ul>
-      <li *ngFor="let party of parties">{{ party }}</li>
+      <li *ngFor="let party of partiesService.getPersonParties(personId)">{{ party }}</li>
     </ul>
   </div>
+  
   <div class="full-person-extra-data">
     <h3>Websites</h3>
     <hr>
     <ul>
-      <li *ngFor="let website of websites">
+      <li *ngFor="let website of websiteService.getWebsiteUrls(personId)">
         <a [href]="website" target="_blank">{{ website }}</a>
       </li>
     </ul>

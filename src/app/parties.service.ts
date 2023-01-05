@@ -10,11 +10,13 @@ export class PartiesService {
   private members_parties!: MemberParties[];
 
   private async getParties() {
+    console.log('fetching parties');
     let res = await fetch(partiesApiUrl);
     this.parties = await res.json();
   }
 
   private async getMembersParties() {
+    console.log('fetching member parties');
     let res = await fetch(membersPartyApiUrl);
     this.members_parties = await res.json();
   }
@@ -25,12 +27,14 @@ export class PartiesService {
   }
 
   private getPartyName(party_id: number): string {
+    if (!this.parties?.length) return "";
     return this.parties.find((mp) => mp.ID == party_id)?.ActualName ?? "";
   }
 
   getPersonParties(personId: string): string[] {
-    let parties_names: string[] = [];
+    if (!this.parties?.length || !this.members_parties?.length) return [];
     let member_parties = this.members_parties.filter((mp) => `${mp.PersonID}` == personId);
+    let parties_names: string[] = [];
 
     for (let pmp of member_parties) {
       let party_name = this.getPartyName(pmp.PartyID);

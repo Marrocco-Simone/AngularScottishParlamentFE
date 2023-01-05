@@ -9,6 +9,7 @@ export class WebsitesService {
   private websites!: Website[];
 
   private async getWebsites() {
+    console.log('fetching websites');
     let res = await fetch(websitesApiUrl);
     this.websites = await res.json();
   }
@@ -18,6 +19,7 @@ export class WebsitesService {
   }
 
   getWebsiteUrls(personId: string): string[] {
+    if (!this.websites?.length) return [];
     return this.websites
       .filter((w) => `${w.PersonID}` == personId)
       .map((w) => w.WebURL);

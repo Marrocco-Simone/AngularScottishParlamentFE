@@ -12,31 +12,23 @@ import { WebsitesService } from '../websites.service';
 })
 export class FullPersonComponent {
   member!: Member;
-  birth_date!: string;
-  profile_picture_url!: string;
-  parties!: string[];
-  websites!: string[];
+  personId!: string;
 
   constructor(
     route: ActivatedRoute,
     router: Router,
-    membersService: MembersService,
-    partiesService: PartiesService,
-    websiteService: WebsitesService
+    public membersService: MembersService,
+    public partiesService: PartiesService,
+    public websiteService: WebsitesService
   ) {
     route.params.subscribe((params: Params) => {
-      let personId = params['personId'];
-      let member = membersService.getSingleMember(personId);
+      this.personId = params['personId'];
+      let member = membersService.getSingleMember(this.personId);
       if (!member) {
         router.navigate(['/']);
         return;
       }
       this.member = member;
-      this.birth_date = membersService.getBirthDate(member);
-      this.profile_picture_url = membersService.getProfilePicture(member);
-
-      this.parties = partiesService.getPersonParties(personId);
-      this.websites = websiteService.getWebsiteUrls(personId);
     });
   }
 }
