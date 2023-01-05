@@ -9,6 +9,7 @@ export class MembersService {
   members: Member[] = [];
 
   private async getMembers() {
+    console.log('fetching members');
     let res = await fetch(membersApiUrl);
     this.members = await res.json();
   }
